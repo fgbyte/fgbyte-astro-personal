@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'fgbyte';
-export const SITE_DESCRIPTION = '@fgbyte Portfolio Site';
+export const SITE_DESCRIPTION = 'fgbyte personal webite';
