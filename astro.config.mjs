@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-modern-personal-website.netlify.app',
+  site: 'https://fgbyte.vercel.app',
   integrations: [mdx(), sitemap(), tailwind()],
   output: "server",
   adapter: vercel()
