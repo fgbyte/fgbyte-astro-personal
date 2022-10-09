@@ -1,17 +1,106 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Demo Post 3"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 12 2022"
-heroImage: "/post_img.webp"
+title: "Cómo configurar multiples colaboradores en tu repo de Github y trabajar en equipo"
+description: "El dueño del repositorio debe darle acceso. Pasos para añadir collaboradores:"
+pubDate: "Oct 08 2022"
+heroImage: "/blog/54353563.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+# 1- Introducción a Github Collaborators
+Lo primero que hace el nuevo collaborator es clonar el repo con el que va a trabajar. Al ser el repo  publico no le va a pedir usuario ni password.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+👀 pero una cosa es que puedas clonar un repo y otra es que puedas hacerle push asi como asi.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Si no estas permitido como usuario con pass incluido te da un "403" y permiso denegado de hacerle push en consola.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+## El owner del repositorio debe darte acceso
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+### Pasos para añadir collaboradores
+
+1. Settings del repo
+2. Collaborators
+3. Add collaborator:
+
+ - (el user debe tener un email publico en su perfil para ser encontrados por otros en Github)
+ - (si quiere mantener su email priv, debe enviarle su username)
+
+4. Ya puede el colaborador enviar Pull Requests libremente al repositorio.
+
+## Importante
+
+### Los cambios de los colaboradores deben hacerse en ramas diferentes
+
+Tanto el jefe como los collaborators debe trabajar en diferentes ramas de desarrollo, los cambios aprobados son los que se le hacen merge a master y **Master** es la version definitiva.
+
+---
+
+# 2- Pull Requests (PR) entre Collaborators
+
+## Que son y cuando se usan?
+
+El pull request (P.R) es un estado intermedio antes de enviar una caracterisitica (**feature**) a la rama master con un merge.
+
+Permite que otros miembros del equipo puedan ver los cambios hechos y si les son buenos, se aprueban.
+
+Al aprobarlos ejecutan el merge, pero OJO no a master, en el Server de Producción; sino a un server de pruebas en una rama de desarrollo.
+
+Para esto utilizan un **server de pruebas** en con una rama llamada "**stagin develeop**" (o simplemente **develop**) para cualquier cosa que se vaya a romper, no se rompa en **production**.
+
+![graph](/blog/20210928115051.png "Graph")
+
+Una vez que se prueba en **develop** se fusionan los cambios con **master** con otro P.R.
+
+*Al aprobarse este, entonces los cambios si pasan a produccion.*
+
+La persona que se encarga de hacer esto es el lider del equipo o un DevOp
+
+## Utilizando los P.R
+
+Suponinedo que tenemos que corregir un error, (es buena practica crear una rama para esto llamada **bug-fix**, **fix-typo**, etc)
+
+- Creamos un branch **fix-typo** y nos movemos a esa rama.
+
+```shell
+git branch fix-typo
+git checkout fix-typo
+```
+
+- Arreglamos los errores y hacemos commit en **fix-typo** de los cambios hechos.
+
+```shell
+git add .
+git commit -am "commit description"
+```
+
+- Hacemos push del branch **fix-typo** a github.
+
+```shell
+git push origin fix-typo
+```
+
+## Debatiendo sobre el P.R
+
+El P.R no ejecuta el Merge de por si, simplemente describe que es lo que esta pasando, para que pueda alguien revisarlo  y ejecutarlo.
+
+- Lo importante es enviarlo al equipo para que lo revise.
+- Se puede asignar a alguien a revisar el P.R.
+
+Entonces se pueden formar una conversacion acerca del PR con el fin de que este sea lo mas bueno al final.
+
+![platzi image](/blog/20210928180707.png " ")
+
+Los cambios aprobados se marcan con un check del Reviewer y entonces esta listo todo para hacer el Merge.
+
+![platzi image](/blog/20210928181317.png " ")
+
+El Merge se confirma como un commit en el repositorio.
+![platzi image](/blog/20210928181408.png " ")
+
+Despues de hacerse el Merge te la opcion de borrar el branch (ya que era un fix y no es bueno llenarse de branches).
+![platzi image](/blog/20210928181500.png " ")
+
+## Que sucedio al final?
+
+Se hizo el Merge y tus cambios fueron agregados a la rama **master**  en producción 🙌.
+
+*Recursos: Curso Git-Github, platzi.com*
