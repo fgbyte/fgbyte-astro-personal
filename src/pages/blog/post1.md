@@ -4,6 +4,7 @@ title: "Cómo configurar multiples colaboradores en tu repo de Github y trabajar
 description: "El dueño del repositorio debe darle acceso. Pasos para añadir collaboradores:"
 pubDate: "Oct 08 2022"
 heroImage: "/blog/54353563.jpg"
+badge: "NEW"
 ---
 
 # 1- Introducción a Github Collaborators
