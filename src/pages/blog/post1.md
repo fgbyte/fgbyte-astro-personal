@@ -4,19 +4,26 @@ title: "Cómo configurar multiples colaboradores en tu repo de Github y trabajar
 description: "El dueño del repositorio debe darle acceso. Pasos para añadir collaboradores:"
 pubDate: "Oct 08 2022"
 heroImage: "/blog/54353563.jpg"
-badge: "NEW"
+badge: ""
 ---
 
-# 1- Introducción a Github Collaborators
+## 🛑 Requerimientos Previos
+
+Conocimientos básicos de Git y de Github. 
+
+Saber hacer commits, crear ramas, merges etc.
+
+## 1- Introducción a Github Collaborators
+
 Lo primero que hace el nuevo collaborator es clonar el repo con el que va a trabajar. Al ser el repo  publico no le va a pedir usuario ni password.
 
-👀 pero una cosa es que puedas clonar un repo y otra es que puedas hacerle push asi como asi.
+Pero una cosa es que puedas clonar un repo y otra es que puedas hacerle push así como así 👀.
 
-Si no estas permitido como usuario con pass incluido te da un "403" y permiso denegado de hacerle push en consola.
+Si no estas permitido como usuario con pass incluido te da un error "403" y un permiso denegado de hacerle push en tu terminal.
 
-## El owner del repositorio debe darte acceso
+### El owner del repositorio debe darte acceso
 
-### Pasos para añadir collaboradores
+#### Pasos para añadir collaboradores:
 
 1. Settings del repo
 2. Collaborators
@@ -27,17 +34,17 @@ Si no estas permitido como usuario con pass incluido te da un "403" y permiso de
 
 4. Ya puede el colaborador enviar Pull Requests libremente al repositorio.
 
-## Importante
+### Importante 👇
 
-### Los cambios de los colaboradores deben hacerse en ramas diferentes
+#### Los cambios de los colaboradores deben hacerse en ramas diferentes
 
 Tanto el jefe como los collaborators debe trabajar en diferentes ramas de desarrollo, los cambios aprobados son los que se le hacen merge a master y **Master** es la version definitiva.
 
 ---
 
-# 2- Pull Requests (PR) entre Collaborators
+## 2- Pull Requests (PR) entre Collaborators
 
-## Que son y cuando se usan?
+### Que son y cuando se usan?
 
 El pull request (P.R) es un estado intermedio antes de enviar una caracterisitica (**feature**) a la rama master con un merge.
 
@@ -55,7 +62,7 @@ Una vez que se prueba en **develop** se fusionan los cambios con **master** con 
 
 La persona que se encarga de hacer esto es el lider del equipo o un DevOp
 
-## Utilizando los P.R
+### Utilizando los P.R
 
 Suponinedo que tenemos que corregir un error, (es buena practica crear una rama para esto llamada **bug-fix**, **fix-typo**, etc)
 
@@ -79,7 +86,7 @@ git commit -am "commit description"
 git push origin fix-typo
 ```
 
-## Debatiendo sobre el P.R
+### Debatiendo sobre el P.R
 
 El P.R no ejecuta el Merge de por si, simplemente describe que es lo que esta pasando, para que pueda alguien revisarlo  y ejecutarlo.
 
@@ -100,7 +107,7 @@ El Merge se confirma como un commit en el repositorio.
 Despues de hacerse el Merge te la opcion de borrar el branch (ya que era un fix y no es bueno llenarse de branches).
 ![platzi image](/blog/20210928181500.png " ")
 
-## Que sucedio al final?
+### Que sucedio al final?
 
 Se hizo el Merge y tus cambios fueron agregados a la rama **master**  en producción 🙌.
 
