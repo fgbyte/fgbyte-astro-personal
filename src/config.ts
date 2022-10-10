@@ -1,5 +1,5 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = 'fgbyte';
-export const SITE_DESCRIPTION = 'fgbyte personal website';
+export const SITE_TITLE = 'Fernando Garcia - Developer, designer, editor';
+export const SITE_DESCRIPTION = 'Web Developer, photography editor, and crypto ethusiast';
