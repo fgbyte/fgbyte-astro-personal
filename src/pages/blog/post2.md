@@ -1,22 +1,32 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Rescatando clases eliminadas por Purguecss en projectos con Bootstrap"
+title: "Rescatando clases eliminadas por PurgeCSS en projectos con Sass y Bootstrap"
 description: "En esta ocación me tuve que adrentrar en el código de Bootstrap 🤓 y descifrar cuales eran las clases afectadas para poder rescatar mis animaciones."
 pubDate: "Oct 09 2022"
-heroImage: ""
+heroImage: "/blog/34534343.jpg"
 badge: "NEW"
 ---
 
 
-Hey devs, **purguecss** es una herramienta super util para reducir el tamaño del codigo CSS sobre todo si se trabaja con SASS y Frameworks grandes o relativamente grandes como  Bootstrap.
+## Introducción al problema
 
-Sass nos permite generar un unico archivo (min.css) con todo el codigo del Framework incluso otras herramientas de estilo como puede ser Fontawesome.
+SASS es genial, ademas de tener una sintaxis fácil de entender, scripts y herramientas ayudan a hacer todo más rápido, eficiente y escalable tu CSS, también **nos permite generar un unico archivo css** donde se recoge todo el código. Es muy usado para trabajar  en complemento  de Frameworks como Bootstrap incluso con otras herramientas de estilos como puede ser Fontawesome.
 
-Lo que sucede es que hay elementos de Bootstrap como los Carouseles que se ve afectada la animacion al usar la herramienta de purgecss.
+El problema es que el **archivo generado casi siempre es enorme** ya que recoge todos los estilos existentes incluso los creados por nosotros mismos.
+
+## PurgeCSS
+
+A la solicion de esto existen herramientas como **PurgeCSS**. Es un programa que recorre todo tu código y va 'purgando' el CSS que no es utilizado. Como resultado deja un minificado (min.css), muuuuucho mas pequeño que el archivo original.
+
+## Problema
+
+Lo que sucede es que hay elementos de Bootstrap como los **Carousels** que se ve afectada la animación al usar la herramientas de depuración de código como purgecss.
 
 En esta ocación me tuve que adrentrar en el código de Bootstrap 🤓 y descifrar cuales eran las clases afectadas para poder rescatar mis animaciones.
 
-En el caso del elemento `.carousel` me percaté estas muestran un comentario con `rtl:begin:ignore`, desconozco su intencion, pero evidentemente herramientas como Purge lo ignoran por completo afectando el codigo final.
+En el caso del las clases de `.carousel-item` me percaté estas muestran un comentario con `rtl:begin:ignore`, el cual desconozco su intención, pero evidentemente herramientas como Purge lo ignoran por completo afectando nuestro codigo final.
+
+A continuacion de muestran las clases que fueron purgadas y no debian haber sido. *Válido aclarar que debe respetarse el orden en que se encuentran en el ejemplo ya que forman parte de la cascada de estilos.*
 
 ## Las clases afectadas son las siguientes:
 
@@ -24,6 +34,10 @@ En el caso del elemento `.carousel` me percaté estas muestran un comentario con
 .carousel-item.active,
 .carousel-item-next,
 
+/* esta ya en el min.css*/
+.carousel-item.active { /*nos sirve de guia*/
+  display: block;
+}
 /* rtl:begin:ignore */
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
@@ -41,21 +55,28 @@ En el caso del elemento `.carousel` me percaté estas muestran un comentario con
   transition-property: opacity;
   transform: none;
 }
-.carousel-fade .carousel-item.active,
-.carousel-fade .carousel-item-next.carousel-item-start,
-.carousel-fade .carousel-item-prev.carousel-item-end {
+.carousel-fade 
+.carousel-item.active,
+.carousel-fade 
+.carousel-item-next.carousel-item-start,
+.carousel-fade 
+.carousel-item-prev.carousel-item-end {
   z-index: 1;
   opacity: 1;
 }
-.carousel-fade .active.carousel-item-start,
-.carousel-fade .active.carousel-item-end {
+.carousel-fade 
+.active.carousel-item-start,
+.carousel-fade 
+.active.carousel-item-end {
   z-index: 0;
   opacity: 0;
   transition: opacity 0s 0.6s;
 }
 @media (prefers-reduced-motion: reduce) {
-  .carousel-fade .active.carousel-item-start,
-.carousel-fade .active.carousel-item-end {
+  .carousel-fade 
+.active.carousel-item-start,
+.carousel-fade 
+.active.carousel-item-end {
     transition: none;
   }
 }
@@ -84,7 +105,8 @@ En el caso del elemento `.carousel` me percaté estas muestran un comentario con
     transition: none;
   }
 }
-.carousel-control-prev:hover, .carousel-control-prev:focus,
+.carousel-control-prev:hover, 
+.carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
   color: #e0e0e0;
@@ -112,8 +134,10 @@ En el caso del elemento `.carousel` me percaté estas muestran un comentario con
 }
 ```
 
-Al agregar este monolito de clases a nuestro min.css los carousel vuelven a funcionar como deberian 🙌
+## Qué ocurrió al final?
 
-Desconozco otras afectaciones que puedan haber en el output de PurgueCSS ya que no han sido de interes en mis desarrollos.
+Al agregar este monolito de clases a nuestro min.css los carousel vuelven a funcionar como deberian 🙌.
+
+Desconozco otras afectaciones que puedan haber en el output de PurgeCSS ya que no han sido de interes en mis desarrollos.
 
 Happy coding!
