@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/PostLayout.astro
+layout: ../../layouts/ProjectLayout.astro
 title: SASS Portfolio
 client: Self
 publishDate: 2020-03-02 00:00:00
