@@ -4,5 +4,5 @@ export interface Project {
 	description: string;
 	publishDate: string;
 	tags: string[];
-	img: string;
+	heroImage: string;
 }

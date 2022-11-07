@@ -2,16 +2,16 @@
 layout: ../../layouts/ProjectLayout.astro
 title: mai.photo
 client: Self
-publishDate: 2020-03-02 00:00:00
-img: projects/mai.photo.jpg
+publishDate: 2022-09-11
+heroImage: /projects/mai.photo.jpg
 description: |
   We built an unofficial Mars Rover Landing site in celebration of NASA’s Perseverance Rover.
 tags:
   - UX-UI
-  - Frontend
+  - Bootstrap
+  - SASS
   - Astro
 badge: NEW
-heroImage: /projects/mai.photo.jpg
 
 ---
 
