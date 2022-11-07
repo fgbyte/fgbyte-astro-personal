@@ -1,8 +1,9 @@
 ---
   import BaseLayout from "../layouts/BaseLayout.astro";
-  import HorizontalCard from "../components/HorizontalCard.astro";
+  import HorizontalCard from '../components/HorizontalCard.astro';
   import type { Project } from '../types';
-  import PortfolioPreview from '../components/PortfolioPreview.astro';
+  import HorizontalProject from '../components/HorizontalProject.astro';
+
 
   const projects = (await Astro.glob<Project>('./project/**/*.md'))
     .filter(({ frontmatter }) => !!frontmatter.publishDate)
@@ -13,10 +14,11 @@
 ---
 
 <BaseLayout title="Projects">
+  
   <h1 class="text-3xl w-full font-bold mb-5">Testing Porjects Grid Format</h1>
   <div class="grid">
     {projects.map((project) =>
-    <PortfolioPreview project={project} />)}
+    <HorizontalProject project={project} />)}
   </div>
 
   <div>

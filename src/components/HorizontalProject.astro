@@ -1,0 +1,35 @@
+---
+	import type { MarkdownInstance } from 'astro';
+	import type { Project } from '../types';
+
+	interface Props {
+		project: MarkdownInstance<Project>;
+	}
+
+	const { frontmatter, url} = Astro.props.project;
+	const {badge, tags} = Astro.props;
+---
+
+<div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+	<a href={url}>
+    <div class="hero-content flex-col md:flex-row">
+      <img src={frontmatter.img} alt={frontmatter.title} class="max-w-full md:max-w-[13rem] rounded-lg" />
+      <div class="grow w-full">
+        <h1 class="text-xl font-bold">
+          {frontmatter.title}
+          {frontmatter.tags && <div class="badge badge-secondary mx-2">{
+			  frontmatter.tags.map((t) => (
+				<div class="tag" data-tag={t}>
+					{t}
+				</div>
+			))
+		  }</div>}
+        </h1>
+        <p class="py-1 text-1xl">{frontmatter.description}</p>
+        <div class="card-actions justify-end">
+          {tags && tags.map((tag) => <div class="badge badge-outline">{tag}</div>)}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
