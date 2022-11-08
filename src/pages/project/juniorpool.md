@@ -8,16 +8,16 @@ description: |
   We built an unofficial SASS Portfolio Landing site in celebration of NASA’s Perseverance Rover.
 tags:
   - UX-UI
-  - Node
-  - Express
   - React
+  - NodeJS
+  - Express
   - MongoDB
-badge: MERNN
+badge: FOSS
 ---
 
 🎨[UX-UI](https://www.figma.com/file/PmXjfvpecnOoKLtsW8q90Q/JuniorPool "Figma") |
-🧑‍💻[Repo](http://example.com/ "Github") |
-🔼[Deployment](http://example.com/ "Vercel")
+🧑‍💻[CodeRepo](http://github.com/fgbyte/JuniorPool "Github") |
+🔼[Deployment](http://juniorpool.vercel.app "Vercel")
 
 ## Conent Here
 Rubber cheese mascarpone cut the cheese. Jarlsberg parmesan cheesy grin cream cheese port-salut stinking bishop ricotta brie. Roquefort when the cheese comes out everybody's happy goat cheese triangles stilton cheese and biscuits goat babybel. Bocconcini roquefort queso danish fontina pecorino.
