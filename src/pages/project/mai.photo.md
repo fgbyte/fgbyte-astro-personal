@@ -12,6 +12,7 @@ tags:
   - SASS
   - Astro
 badge: NEW
+fav: true
 ---
 
 

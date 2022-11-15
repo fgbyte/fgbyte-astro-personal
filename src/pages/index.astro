@@ -6,7 +6,13 @@
     (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
   );
 
-  const last_projects = projects.slice(0, 3);
+  const favs = projects.filter(project =>{
+    if(project.frontmatter.fav == true){
+      return project
+    }
+  })
+
+  const last_projects = favs.slice(0, 3);
 
   const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -20,7 +26,7 @@
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Fernando García</div>
-    <div class="text-3xl py-3 font-bold">Web Developer⚡UX-UI Designer</div>
+    <div class="text-3xl py-3 font-bold">Web Developer⚡UX Designer</div>
     <div class="py-2">
       <text class="text-lg">
         I share specialized knowledge in technology to identify business opportunities, develop applications, optimize

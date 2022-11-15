@@ -10,7 +10,7 @@ tags:
   - SASS
   - JavaScript
 badge: 
-
+fav: true
 ---
 
 Change some things here
