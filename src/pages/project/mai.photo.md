@@ -17,7 +17,7 @@ fav: true
 
 
 🎨[UX-UI](https://www.figma.com/file/PmXjfvpecnOoKLtsW8q90Q/JuniorPool "Figma") |
-🧑‍💻[Repo](http://example.com/ "Github") |
+🧑‍💻[Code](http://example.com/ "Github") |
 🔼[Deployment](http://example.com/ "Vercel")
 
 ## Conent Here

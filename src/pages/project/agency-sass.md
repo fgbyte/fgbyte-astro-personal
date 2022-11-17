@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: Agency Landing Page
 client: Self
 publishDate: 2022-07-11
-heroImage: /projects/agency-sass.png
+heroImage: /projects/agency-sass.jpg
 description: |
   We built an unofficial SASS Portfolio Landing site in celebration of NASA’s Perseverance Rover.
 tags:

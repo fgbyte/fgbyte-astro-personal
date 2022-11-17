@@ -8,7 +8,6 @@ description: |
   We built an unofficial SASS Portfolio Landing site in celebration of NASA’s Perseverance Rover.
 tags:
   - UX-UI
-  - React
   - NodeJS
   - Express
   - MongoDB
@@ -17,7 +16,6 @@ fav:
 ---
 
 🎨[UX-UI](https://www.figma.com/file/PmXjfvpecnOoKLtsW8q90Q/JuniorPool "Figma") |
-🧑‍💻[CodeRepo](http://github.com/fgbyte/JuniorPool "Github") |
 🔼[Deployment](http://juniorpool.vercel.app "Vercel")
 
 ## Conent Here
