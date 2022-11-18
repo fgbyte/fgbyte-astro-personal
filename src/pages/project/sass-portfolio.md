@@ -19,5 +19,5 @@ Rubber cheese mascarpone cut the cheese. Jarlsberg parmesan cheesy grin cream ch
 
 ### Links:
 
-💻<a href="http://example.com/" target="_blank">View Code</a> |
-🌐<a href="http://example.com/" target="_blank">View Deploy</a>
+💻<a href="http://example.com/" target="_blank">Code</a> |
+🌐<a href="http://example.com/" target="_blank">Deploy</a>
