@@ -2,6 +2,18 @@
   import BaseLayout from "../layouts/BaseLayout.astro";
   import HorizontalCard from "../components/HorizontalCard.astro";
 
+  const projects = (await Astro.glob("./project/*.{md,mdx}")).sort(
+    (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+  );
+
+  const favs = projects.filter(project =>{
+    if(project.frontmatter.fav == true){
+      return project
+    }
+  })
+
+  const last_projects = favs.slice(0, 3);
+
   const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
     (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
   );
@@ -17,7 +29,8 @@
     <div class="text-3xl py-3 font-bold">Web Developer⚡Designer</div>
     <div class="py-2">
       <text class="text-lg">
-        I share specialized knowledge in technology to identify business opportunities, develop applications, optimize processes and maximize yields. <br> I also edit photos and make websites :)
+        I share specialized knowledge in technology to identify business opportunities, develop applications, optimize
+        processes and maximize yields. <br> I also make websites :)
       </text>
     </div>
     <div class="mt-8">
@@ -30,24 +43,13 @@
     <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
   </div>
 
-  <HorizontalCard title="mai.photo" img="/projects/mai.photo.jpg"
-    desc="Full Responsive Comercial Web Site for Photography." url="https://mai-photo.vercel.app" badge="NEW" />
-
+  {
+  last_projects.map((project) => (
+  <HorizontalCard title={project.frontmatter.title} img={project.frontmatter.heroImage}
+    desc={project.frontmatter.description} badge={project.frontmatter.badge} url={project.url} target="_self" />
   <div class="divider my-0"></div>
-
-  <HorizontalCard title="Demo Portfolio Site" img="/projects/sass_portfolio@0.5x.jpg"
-    desc="A simple portfolio site made with simple techs" url="https://fgbyte.github.io/demo-sass-portfolio/dist" />
-
-
-  <!-- <div class="divider my-0"></div>
-    <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  /> -->
-
+  ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>

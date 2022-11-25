@@ -1,58 +1,22 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
+  import BaseLayout from "../layouts/BaseLayout.astro";
+  import type { Project } from '../types';
+  import HorizontalProject from '../components/HorizontalProject.astro';
+
+
+  const projects = (await Astro.glob<Project>('./project/**/*.md'))
+    .filter(({ frontmatter }) => !!frontmatter.publishDate)
+    .sort(
+      (a, b) =>
+        new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+    );
 ---
 
-<BaseLayout title = "Projects">
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Web Design Projects</div>
+<BaseLayout title="Projects">
+  
+  <h1 class="text-3xl w-full font-bold mb-5">My Projects</h1>
+  <div class="grid">
+    {projects.map((project) =>
+    <HorizontalProject project={project} />)}
   </div>
-
-  <HorizontalCard 
-    title="mai.photo" 
-    img="/projects/mai.photo.jpg"
-    desc="Full Responsive Comercial Web Site for Photography." 
-    url="https://mai-photo.vercel.app" badge="NEW" />
-
-  <div class="divider my-0"></div>
-
-  <HorizontalCard 
-    title="Demo Portfolio Site" 
-    img="/projects/sass_portfolio@0.5x.jpg"
-    desc="A simple portfolio site made with simple techs" 
-    url="https://fgbyte.github.io/demo-sass-portfolio/dist" />
-    
-  <div class="divider my-0"></div>
-
-  <HorizontalCard 
-    title="Demo Agency Landing Page" 
-    img="/projects/agency-sass.png"
-    desc="A Full Responsive Landing Page for online Agencys or Business."
-    url="https://fgbyte.github.io/BS5-Sass-AgencyPortfolio/dist/" />
-<!-- 
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Web Apps Projects</div>
-  </div>
-
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 4"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 5"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  /> -->
 </BaseLayout>
