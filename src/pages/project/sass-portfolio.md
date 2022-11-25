@@ -17,5 +17,5 @@ Portfolio Desing implement with HTML, CSS/SASS and JavaScript. Full Resposive, A
 
 ### Shows:
 
-🌐<a href="http://example.com/" target="_blank">Deploy</a>
-💻<a href="http://example.com/" target="_blank">Code</a> |
+🌐<a href="https://fgbyte.github.io/demo-sass-portfolio/dist/" target="_blank">Deploy</a>
+💻<a href="https://github.com/fgbyte/demo-sass-portfolio" target="_blank">Code</a> |
