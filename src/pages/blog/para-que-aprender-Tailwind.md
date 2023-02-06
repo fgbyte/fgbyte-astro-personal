@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/PostLayout.astro"
-title: "Para qué aprender Tailwind si ya se Sass & Bootstrap?"
+title: "Por qué aprender Tailwind si ya sabes Sass & Bootstrap?"
 description: "Hay sacrificios... y estos pesan en el resultado final. Concretamente en el DOM. Tailwind ha llevado al máximo conceptos como el Utility First..."
 pubDate: "Feb 06 2023"
 heroImage: "/blog/54353567.jpg"
