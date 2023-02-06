@@ -4,7 +4,7 @@ title: "Rescatando clases eliminadas por PurgeCSS en proyectos con Sass y Bootst
 description: "En esta ocasión me tuve que adentrar en el código de Bootstrap 🤓 y descifrar cuales eran las clases afectadas para poder rescatar mis animaciones."
 pubDate: "Oct 09 2022"
 heroImage: "/blog/34534343.jpg"
-badge: "NEW"
+badge: ""
 ---
 
 
