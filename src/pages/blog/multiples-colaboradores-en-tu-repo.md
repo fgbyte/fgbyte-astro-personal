@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "Cómo configurar multiples colaboradores en tu repo de Github y trabajar en equipo"
-description: "El dueño del repositorio debe darle acceso. Pasos para añadir collaboradores:"
+description: "El dueño del repositorio debe darle acceso. Pasos para añadir colaboradores:"
 pubDate: "Oct 08 2022"
 heroImage: "/blog/54353563.jpg"
 badge: ""
@@ -23,7 +23,7 @@ Si no estas permitido como usuario con pass incluido te da un error "403" y un p
 
 ### El owner del repositorio debe darte acceso
 
-#### Pasos para añadir collaboradores:
+#### Pasos para añadir colaboradores:
 
 1. Settings del repo
 2. Collaborators
@@ -46,25 +46,25 @@ Tanto el jefe como los collaborators debe trabajar en diferentes ramas de desarr
 
 ### Que son y cuando se usan?
 
-El pull request (P.R) es un estado intermedio antes de enviar una caracterisitica (**feature**) a la rama master con un merge.
+El pull request (P.R) es un estado intermedio antes de enviar una característica (**feature**) a la rama master con un merge.
 
 Permite que otros miembros del equipo puedan ver los cambios hechos y si les son buenos, se aprueban.
 
 Al aprobarlos ejecutan el merge, pero OJO no a master, en el Server de Producción; sino a un server de pruebas en una rama de desarrollo.
 
-Para esto utilizan un **server de pruebas** en con una rama llamada "**stagin develeop**" (o simplemente **develop**) para cualquier cosa que se vaya a romper, no se rompa en **production**.
+Para esto utilizan un **server de pruebas** en con una rama llamada "**staging develop**" (o simplemente **develop**) para cualquier cosa que se vaya a romper, no se rompa en **production**.
 
 ![graph](/blog/20210928115051.png "Graph")
 
 Una vez que se prueba en **develop** se fusionan los cambios con **master** con otro P.R.
 
-*Al aprobarse este, entonces los cambios si pasan a produccion.*
+*Al aprobarse este, entonces los cambios si pasan a producción.*
 
-La persona que se encarga de hacer esto es el lider del equipo o un DevOp
+La persona que se encarga de hacer esto es el líder del equipo o un DevOp
 
 ### Utilizando los P.R
 
-Suponinedo que tenemos que corregir un error, (es buena practica crear una rama para esto llamada **bug-fix**, **fix-typo**, etc)
+Suponiendo que tenemos que corregir un error, (es buena practica crear una rama para esto llamada **bug-fix**, **fix-typo**, etc)
 
 - Creamos un branch **fix-typo** y nos movemos a esa rama.
 
@@ -93,7 +93,7 @@ El P.R no ejecuta el Merge de por si, simplemente describe que es lo que esta pa
 - Lo importante es enviarlo al equipo para que lo revise.
 - Se puede asignar a alguien a revisar el P.R.
 
-Entonces se pueden formar una conversacion acerca del PR con el fin de que este sea lo mas bueno al final.
+Entonces se pueden formar una conversación acerca del PR con el fin de que este sea lo mas bueno al final.
 
 ![platzi image](/blog/20210928180707.png " ")
 
@@ -104,10 +104,10 @@ Los cambios aprobados se marcan con un check del Reviewer y entonces esta listo 
 El Merge se confirma como un commit en el repositorio.
 ![platzi image](/blog/20210928181408.png " ")
 
-Despues de hacerse el Merge te la opcion de borrar el branch (ya que era un fix y no es bueno llenarse de branches).
+Después de hacerse el Merge te la opción de borrar el branch (ya que era un fix y no es bueno llenarse de branches).
 ![platzi image](/blog/20210928181500.png " ")
 
-### Que sucedio al final?
+### Que sucedió al final?
 
 Se hizo el Merge y tus cambios fueron agregados a la rama **master**  en producción 🙌.
 
