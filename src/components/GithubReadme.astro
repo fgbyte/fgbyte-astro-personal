@@ -1,0 +1,21 @@
+---
+import { marked } from "marked";
+import { getRemoteFileData } from "./helpers/getRemoteFile";
+import { reyeno } from "./helpers/reyeno"
+
+
+let content = "";
+
+const fileData = await getRemoteFileData(
+  `https://raw.githubusercontent.com/fgbyte/fgbyte/main/README.md`,
+  "text"
+);
+if (fileData) {
+  content = marked.parse(fileData);
+} else {
+  content = marked.parse(reyeno);
+}
+---
+
+<article class="py-3 overflow-auto prose-h2:mt-3 prose-h2:mb-3  prose-h2:text-3xl prose-a:underline prose-ul:list-disc prose-ul:my-2 prose-h4:hidden prose-img:hidden prose-li:my-2" set:html={content}></article>
+

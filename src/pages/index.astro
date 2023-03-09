@@ -1,6 +1,7 @@
 ---
   import BaseLayout from "../layouts/BaseLayout.astro";
   import HorizontalCard from "../components/HorizontalCard.astro";
+  import GithubReadme from "../components/GithubReadme.astro";
 
   const projects = (await Astro.glob("./project/*.{md,mdx}")).sort(
     (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
@@ -24,16 +25,12 @@
 <BaseLayout>
 
   <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Fernando García</div>
-    <div class="text-3xl py-3 font-bold">Frontend UX Developer 💻</div>
-    <div class="py-2">
-      <text class="text-lg">
-        I share specialized knowledge in technology to identify business opportunities, develop applications, optimize
-        processes and maximize yields. <br> I also make websites :)
-      </text>
-    </div>
-    <div class="mt-8">
+    <!-- <div class="text-xl py-1">Hey there 👋</div> -->
+    <h1 class="text-5xl font-bold">I'm Fernando García</h1>
+
+    <GithubReadme/>
+
+    <div class="mt-5">
       <a class="btn" href="https://twitter.com/fgbyte" target="_blank"> Let's connect!</a>
       <a href="https://fernandogarcia.showwcase.com" target="_blank" class="btn btn-outline ml-5"> View CV</a>
     </div>
