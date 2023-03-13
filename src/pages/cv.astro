@@ -2,6 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
+
+const currentYear = new Date().getFullYear()
+
+const education3sub = `2018 to ${currentYear} at Mozilla Developer Network`
 ---
 
 <BaseLayout title = "Resume">
@@ -18,15 +22,36 @@ import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
     />
     <TimeLineElement
       title="Bachelor in Food Science"
-      subtitle="2012 to 2018 at University of Havana, Habana, Cuba"
+      subtitle="2012 to 2018 at University of Havana, Havana, Cuba"
     />
     <TimeLineElement
-      title=""
-      subtitle=""
+      title="Self-taught Web Developer"
+      subtitle={education3sub}
     />
   </div>
 
+
   <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/d604a704-67e9-487d-9301-7bbc64e5a629" target="_blank">Open-Bootcamp <b>HTML-CSS</b> Certification</a>
+    </li>
+    <li>
+      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/0cf954b5-9df9-4477-bdd1-8df1df9fab36" target="_blank">Open-Bootcamp <b>JavaScript</b> Certification</a>
+    </li>
+    <!-- <li>
+      <a href="https://www.efset.org/cert/DxtNKG" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
+    </li>
+    <li>
+      <a href="https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp" target="_blank"> Scrum Foundation Professional Certificate (SFPC)</a>
+    </li> -->
+  </ul>
+
+
+  <!-- <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
 
@@ -51,20 +76,7 @@ import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
       subtitle="From 2017 to 2018 at CEDIN, UCI, Habana, Cuba"
       desc="System of steps of primary information at a company. personnel's steps, control of access, impression of credentials, steps of locales, structure and composition. Technologies: Php,Symfony 3.3 , Gitlab, PostgreSQL, , Boostrap 3, JQuery, HTML,CSS, JavaScript"
     />
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="https://www.efset.org/cert/DxtNKG" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
-    </li>
-    <li>
-      <a href="https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp" target="_blank"> Scrum Foundation Professional Certificate (SFPC)</a>
-    </li>
-  </ul>
+  </div> -->
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">All Skills</div>
@@ -96,4 +108,8 @@ import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
     <li>Adobe Photoshop</li>
     <li>Adobe Lightroom</li>
   </ul>
+
+  <div class="mt-5">
+    <a class="btn" href="/projects"> Watch Portfolio</a>
+    </div>
 </BaseLayout>
