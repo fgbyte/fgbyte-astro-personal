@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
+
+const currentYear = new Date().getFullYear()
+
+const education3sub = `2018 to ${currentYear} at Mozilla Developer Network`
+---
+
+<BaseLayout title = "Resume">
+    <GithubReadmeCV/>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Technician Information-Technology"
+      subtitle="2008 to 2011 at Karls Marx Polytechnic Institute, Matanzas, Cuba"
+    />
+    <TimeLineElement
+      title="Bachelor in Food Science"
+      subtitle="2012 to 2018 at University of Havana, Havana, Cuba"
+    />
+    <TimeLineElement
+      title="Self-taught Web Developer"
+      subtitle={education3sub}
+    />
+  </div>
+
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/d604a704-67e9-487d-9301-7bbc64e5a629" target="_blank">Open-Bootcamp <b>HTML-CSS</b> Certification</a>
+    </li>
+    <li>
+      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/0cf954b5-9df9-4477-bdd1-8df1df9fab36" target="_blank">Open-Bootcamp <b>JavaScript</b> Certification</a>
+    </li>
+    <!-- <li>
+      <a href="https://www.efset.org/cert/DxtNKG" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
+    </li>
+    <li>
+      <a href="https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp" target="_blank"> Scrum Foundation Professional Certificate (SFPC)</a>
+    </li> -->
+  </ul>
+
+
+  <!-- <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="UI Designer and Developer at Integral Access Control System (Thesis)"
+      subtitle="From 2015 at XETID, Habana, Cuba"
+      desc="System multiplatform that includes the steps of a company's personnel, the structure and composition thereof, as well as a powerful designer of credentials and module of control of access. Outspread at the MINFAR and another entities of the country. Technologies: C++, Qt Framework, Subversión, Visual Paradigm, PostgreSQL, Jmeter"
+    />
+    <TimeLineElement
+      title="Web Developer at Integral Oil Drilling System 2.0"
+      subtitle="From 2015 to 2016 at CEDIN, UCI, Habana, Cuba"
+      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.7 , Subversión, PostgreSQL, HigthChart, Ireport, Boostrap 2, JQuery, HTML,CSS, JavaScript"
+    />
+    <TimeLineElement
+      title="Full Stack Dev, Software Architect and Project Leader at Integral Oil Drilling System 3.0"
+      subtitle="From 2016 to 2017 at CEDIN, UCI, Habana, Cuba"
+      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.8 , Gitlab, PostgreSQL, HigthChart, Boostrap 2, JQuery, HTML,CSS, JavaScript"
+    />
+    <TimeLineElement
+      title="Full Stack Dev, UI/UX Designer and Software Architect at Primary Information System"
+      subtitle="From 2017 to 2018 at CEDIN, UCI, Habana, Cuba"
+      desc="System of steps of primary information at a company. personnel's steps, control of access, impression of credentials, steps of locales, structure and composition. Technologies: Php,Symfony 3.3 , Gitlab, PostgreSQL, , Boostrap 3, JQuery, HTML,CSS, JavaScript"
+    />
+  </div> -->
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">All Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>Spanish (Native)</li>
+    <li>English (C2)</li>
+    <li>JavaScript</li>
+    <li>TypeScript</li>
+    <li>Docker</li>
+    <li>CSS</li>
+    <li>SASS</li>
+    <li>HTML</li>
+    <li>Node.js</li>
+    <li>Astro</li>
+    <li>Bootstrap</li>
+    <li>TaildwindCSS</li>
+    <li>Wordpress</li>
+    <li>Git</li>
+    <li>Trello</li>
+    <li>UI Design</li>
+    <li>UX Design</li>
+    <li>Web Design</li>
+    <li>Image Manipulation</li>
+    <li>Office Suite</li>
+    <li>Lunacy</li>
+    <li>Adobe Figma</li>
+    <li>Adobe Photoshop</li>
+    <li>Adobe Lightroom</li>
+  </ul>
+
+  <div class="mt-5">
+    <a class="btn" href="/projects"> Watch Portfolio</a>
+    </div>
+</BaseLayout>
