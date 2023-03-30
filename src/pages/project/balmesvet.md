@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: Balmesvet Layouts
 client: Balmesvet Veterinary Clinic
 publishDate: 2023-03-02 00:00:00
-heroImage: /projects/balmesvet.jpg
+heroImage: /projects/balmesvet.webp
 description: |
   Full Responsive Layouts made for a Veterinary's Web Site
 tags:

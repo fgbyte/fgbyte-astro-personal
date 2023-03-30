@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: mai.photo
 client: Self
 publishDate: 2022-09-11
-heroImage: /projects/mai.photo.jpg
+heroImage: /projects/mai-photo.webp
 description: |
   Commercial Portfolio/Catalog for Photographer and Photo Studio. SEO friendly, modern Frameworks.
 tags:

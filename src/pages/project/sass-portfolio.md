@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: SASS Portfolio
 client: Self
 publishDate: 2020-03-02 00:00:00
-heroImage: /projects/sass_portfolio@0.5x.jpg
+heroImage: /projects/sass-portfolio.webp
 description: |
   Full Responsive & Customizable Portfolio Site made with simple techs.
 tags:
@@ -13,7 +13,7 @@ badge:
 fav: true
 ---
 
-Portfolio Design implement with HTML, CSS/SASS and JavaScript. Full Resposive, Animated Menu and internal pages.
+Portfolio Design implement with HTML, CSS/SASS and JavaScript. Full Responsive, Animated Menu and internal pages.
 
 ### Shows:
 

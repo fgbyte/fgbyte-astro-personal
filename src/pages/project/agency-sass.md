@@ -3,7 +3,7 @@ layout: ../../layouts/ProjectLayout.astro
 title: Agency Landing Page
 client: Self
 publishDate: 2022-07-11
-heroImage: /projects/agency-sass.jpg
+heroImage: /projects/agency-sass.webp
 description: |
   Versatile & Customizable Landing Page for Companies.
 tags:
