@@ -5,7 +5,7 @@ import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
 
 const currentYear = new Date().getFullYear()
 
-const education3sub = `2018 to ${currentYear} at Mozilla Developer Network`
+const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`
 ---
 
 <BaseLayout title = "Resume">
@@ -17,16 +17,16 @@ const education3sub = `2018 to ${currentYear} at Mozilla Developer Network`
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
+    title="Front-End Web Developer"
+    subtitle={educationSub}
+    />
+    <TimeLineElement
+    title="Bachelor's Degree in Food Science"
+    subtitle="2012 to 2018, University of Havana"
+    />
+    <TimeLineElement
       title="Technician Information-Technology"
-      subtitle="2008 to 2011 at Karls Marx Polytechnic Institute, Matanzas, Cuba"
-    />
-    <TimeLineElement
-      title="Bachelor's Degree in Food Science"
-      subtitle="2012 to 2018 at University of Havana, Havana, Cuba"
-    />
-    <TimeLineElement
-      title="Self-taught Web Developer"
-      subtitle={education3sub}
+      subtitle="2008 to 2011, Computer Science Polytechnic Institute, Matanzas, Cuba"
     />
   </div>
 
@@ -40,7 +40,7 @@ const education3sub = `2018 to ${currentYear} at Mozilla Developer Network`
       <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/d604a704-67e9-487d-9301-7bbc64e5a629" target="_blank">Open-Bootcamp <b>HTML-CSS</b> Certification</a>
     </li>
     <li>
-      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/0cf954b5-9df9-4477-bdd1-8df1df9fab36" target="_blank">Open-Bootcamp <b>JavaScript</b> Certification</a>
+      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/0cf954b5-9df9-4477-bdd1-8df1df9fab36" target="_blank">Open-Bootcamp <b>JavaScript</b> Certification </a>
     </li>
     <!-- <li>
       <a href="https://www.efset.org/cert/DxtNKG" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
@@ -104,8 +104,8 @@ const education3sub = `2018 to ${currentYear} at Mozilla Developer Network`
     <li>Office Suite</li>
     <li>Lunacy</li>
     <li>Figma</li>
-    <li>Adobe Photoshop</li>
-    <li>Adobe Lightroom</li>
+    <li>Photoshop</li>
+    <li>Lightroom</li>
     <li>Image Manipulation</li>
     <li>Google Analytics</li>
     <li>Google Tag Manager</li>
