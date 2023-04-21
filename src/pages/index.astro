@@ -1,44 +1,60 @@
 ---
-  import BaseLayout from "../layouts/BaseLayout.astro";
-  import HorizontalCard from "../components/HorizontalCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
 
-  const projects = (await Astro.glob("./project/*.{md,mdx}")).sort(
-    (a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
-  );
+const projects = (await Astro.glob("./project/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
 
-  const favs = projects.filter(project =>{
-    if(project.frontmatter.fav == true){
-      return project
-    }
-  })
+const favs = projects.filter((project) => {
+  if (project.frontmatter.fav == true) {
+    return project;
+  }
+});
 
-  const last_projects = favs.slice(0, 3);
+const last_projects = favs.slice(0, 3);
 
-  const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-    (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
-  );
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
+);
 
-  const last_posts = posts.slice(0, 3);
+const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout>
-
   <div class="pb-12 mt-5">
     <h1 class="text-5xl font-bold">Fernando García</h1>
 
-    <h2 class="mt-3 text-3xl font-semibold">Frontend Developer - Web Insights Implementation</h2>
+    <h2 class="mt-3 text-3xl font-semibold">
+      Frontend Developer - Web Insights Implementation
+    </h2>
     <p class="mt-3 text-lg leading-8">
-      Boost your project with innovative solutions in speed, security and performance,
-      I specialize in user interface development and collecting valuable metrics to maximize your users' experience. </p>
+      Boost your project with innovative solutions in speed, security, and
+      performance. I specialize in user interface development and
+      creating scalable frontend solutions.
+    </p>
     <p class="mt-3 text-lg leading-8">
-      ✅ Frontend optimization: Speed up your projects with a user-focused and continuous improvement approach. </p>
+      ✅ Scalable Frontend Development: Speed up your projects with scalability in mind, using a user-focused and continuous improvement approach.
+    </p>
     <p class="mt-3 text-lg leading-8">
-      📊 Valuable metrics: I collect and analyze relevant data for your website to optimize the experience and increase revenue. </p>
+      📊 Collect Valuable Metrics: Gather relevant data and events from your project. Use it to your advantage as feedback to analyze and optimize the user experience and increase revenue.
+    </p>
     <p class="mt-3 text-lg leading-8">
-      💡 Take your product to the next level: See how your project transforms and reaches its full potential.</p>
+      💡  Take your product to the next level: Witness how your project transforms and reach its full potential with our services.
+    </p>
 
     <div class="mt-5">
-      <a class="btn cta" href="mailto:fer.garciabayon@gmail.com" target="_blank"> Let's connect!</a>
+      <a
+        class="btn cta"
+        href="mailto:fer.garciabayon@gmail.com"
+        target="_blank"
+      >
+        Let's Connect!</a
+      >
       <a href="/cv" class="btn btn-outline ml-5"> About Me</a>
     </div>
   </div>
@@ -60,11 +76,18 @@
   </div>
 
   {
-  last_posts.map((post) => (
-  <HorizontalCard title={post.frontmatter.title} img={post.frontmatter.heroImage} desc={post.frontmatter.description}
-    badge={post.frontmatter.badge} url={post.url} target="_self" />
-  <div class="divider my-0"></div>
-  ))
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.frontmatter.title}
+          img={post.frontmatter.heroImage}
+          desc={post.frontmatter.description}
+          badge={post.frontmatter.badge}
+          url={post.url}
+          target="_self"
+        />
+        <div class="divider my-0" />
+      </>
+    ))
   }
-
 </BaseLayout>
