@@ -19,6 +19,8 @@ Commercial Portfolio/Catalog for Photographer and Photo Studio. Extensible for b
 
 ### Shows:
 
-🌐<a href="http://new-mai-photo.vercel.app" target="_blank">Watch Deployed</a> |
-💻<a href="https://github.com/fgbyte/mai.photo" target="_blank">Layouts Code</a> |
+🌐<a href="http://new-mai-photo.vercel.app" target="_blank">Watch Deployed</a>
+
+💻<a href="https://github.com/fgbyte/mai.photo" target="_blank">Layouts Code</a>
+
 🎨<a href="https://www.figma.com/file/XnNbigQ0s4FL0IvBGre4DN/mai.photo" target="_blank">UX-UI</a> 

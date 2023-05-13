@@ -11,7 +11,7 @@ tags:
   - Bootstrap
   - JavaScript
   - Google Maps
-badge: NEW
+badge: 
 fav: true
 ---
 

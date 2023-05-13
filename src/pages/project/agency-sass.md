@@ -18,5 +18,6 @@ This versatile template it's specially designed as a Full Responsive Landing Pag
 ### Shows:
 
 
-🌐<a href="https://fgbyte.github.io/BS5-Sass-AgencyPortfolio/dist/" target="_blank">Watch Deployed</a> |
+🌐<a href="https://fgbyte.github.io/BS5-Sass-AgencyPortfolio/dist/" target="_blank">Watch Deployed</a>
+
 💻<a href="https://github.com/fgbyte/BS5-Sass-AgencyPortfolio" target="_blank">Layouts Code</a> 
