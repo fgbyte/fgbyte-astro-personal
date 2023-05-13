@@ -11,7 +11,7 @@ tags:
   - SSR
   - Tailwind
   - JavaScript
-badge: NEW
+badge: FOSS
 fav: true
 ---
 
