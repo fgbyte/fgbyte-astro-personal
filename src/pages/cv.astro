@@ -3,26 +3,28 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
-const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`
+const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`;
 ---
 
-<BaseLayout title = "Resume">
-    <GithubReadmeCV/>
+<BaseLayout title="Resume">
+  <GithubReadmeCV />
+
+  <div class="flex mb-5 gap-6">
+    <a class="btn" href="https://resume.showwcase.com/fgbyte.pdf">Download CV</a>
+    <a class="btn" href="/projects"> Watch Portfolio</a>
+  </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement title="Front-End Web Developer" subtitle={educationSub} />
     <TimeLineElement
-    title="Front-End Web Developer"
-    subtitle={educationSub}
-    />
-    <TimeLineElement
-    title="Bachelor's Degree in Food Science"
-    subtitle="2012 to 2018, University of Havana"
+      title="Bachelor's Degree in Food Science"
+      subtitle="2012 to 2018, University of Havana"
     />
     <TimeLineElement
       title="Technician Information-Technology"
@@ -30,17 +32,23 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`
     />
   </div>
 
-
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certifications</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/d604a704-67e9-487d-9301-7bbc64e5a629" target="_blank">Open-Bootcamp <b>HTML-CSS</b> Certification</a>
+      <a
+        href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/d604a704-67e9-487d-9301-7bbc64e5a629"
+        target="_blank">Open-Bootcamp <b>HTML-CSS</b> Certification</a
+      >
     </li>
     <li>
-      <a href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/0cf954b5-9df9-4477-bdd1-8df1df9fab36" target="_blank">Open-Bootcamp <b>JavaScript</b> Certification </a>
+      <a
+        href="https://community.open-bootcamp.com/user/fgbyte/certificaciones/0cf954b5-9df9-4477-bdd1-8df1df9fab36"
+        target="_blank"
+        >Open-Bootcamp <b>JavaScript</b> Certification
+      </a>
     </li>
     <!-- <li>
       <a href="https://www.efset.org/cert/DxtNKG" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
@@ -49,7 +57,6 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`
       <a href="https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp" target="_blank"> Scrum Foundation Professional Certificate (SFPC)</a>
     </li> -->
   </ul>
-
 
   <!-- <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
@@ -93,6 +100,7 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`
     <li>HTML</li>
     <li>Node.js</li>
     <li>Astro</li>
+    <li>React</li>
     <li>Bootstrap</li>
     <li>TaildwindCSS</li>
     <li>Git</li>
@@ -111,7 +119,6 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`
   </ul>
 
   <div class="flex gap-6 mt-7">
-    <a class="btn" href="/projects"> Watch Portfolio</a>
-      <a class="btn" href="/refunds-policy"> Refunds Policy</a>
-      </div>
+    <a class="btn" href="/refunds-policy"> Refunds Policy</a>
+  </div>
 </BaseLayout>
