@@ -27,38 +27,33 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout>
   <div class="pb-12 mt-5">
-    <h1 class="text-5xl font-bold">Fernando García</h1>
-
-    <h2 class="mt-3 text-3xl font-semibold">Frontend Developer</h2>
-    <p class="p-3 text-lg leading-8">
-      💻 I'm a frontend developer passionate about speed, security and
-      performance metrics. I specialize in user interface development for
-      creating scalable frontend solutions.
+    <h1 class="text-5xl font-bold">
+      Boost your project to highers standards!🚀
+    </h1>
+    <h2 class="mt-8 mb-2 text-3xl font-semibold">My Services:</h2>
+    <p class="p-3 text-lg leading-8 hover:bg-slate-800 hover:rounded-md">
+      💻 Frontend Web Development: Speed up your projects with scalability in mind.
+      I develop your app using the best and fastest frontend technologies.
     </p>
     <p class="p-3 text-lg leading-8 hover:bg-slate-800 hover:rounded-md">
-      ✅ Frontend Development: Speed up your projects with scalability in mind,
-      using continuous improvement.
+      📊 Data Collecting: Obtain relevant metrics from your project. Use it as
+      feedback to optimize them and improve revenue.
     </p>
-    <!-- <p class="p-3 text-lg leading-8 hover:bg-slate-800 hover:rounded-md ">
-      🤖 Content Automation System: Save time and resources removing repetitive tasks, and focus on creating high-quality content only.
-    </p> -->
     <p class="p-3 text-lg leading-8 hover:bg-slate-800 hover:rounded-md">
-      📊 Collecting Metrics: Obtain relevant data from your project. Use it as
-      feedback to optimize the user experience.
+      🤖 Custom Automation: Save time and resources removing repetitive tasks
+      and just focus on create high-quality.
     </p>
-    <p class="mt-3 p-3 text-lg leading-8">
-      💡 Take your project to the next level.
-    </p>
+    <p class="mt-3 p-3 text-lg leading-8"></p>
 
-    <div class="mt-5">
+    <div class="flex gap-6">
+      <a href="/cv" class="btn"> About Me</a>
       <a
-        class="btn cta"
+        class="btn btn-outline cta"
         href="mailto:fer.garciabayon@gmail.com"
         target="_blank"
       >
         Let's Connect!</a
       >
-      <a href="/cv" class="btn btn-outline ml-5"> About Me</a>
     </div>
   </div>
 
@@ -82,26 +77,25 @@ const last_posts = posts.slice(0, 3);
     ))
   }
 
-  
-<div>
-  <div class="text-3xl w-full font-bold mb-2 mt-10">
-    Latest from Portfolio
+  <div>
+    <div class="text-3xl w-full font-bold mb-2 mt-10">
+      Latest from Portfolio
+    </div>
   </div>
-</div>
 
-{
-  last_projects.map((project) => (
-    <>
-      <HorizontalCard
-        title={project.frontmatter.title}
-        img={project.frontmatter.heroImage}
-        desc={project.frontmatter.description}
-        badge={project.frontmatter.badge}
-        url={project.url}
-        target="_self"
-      />
-      <div class="divider my-0" />
-    </>
-  ))
-}
+  {
+    last_projects.map((project) => (
+      <>
+        <HorizontalCard
+          title={project.frontmatter.title}
+          img={project.frontmatter.heroImage}
+          desc={project.frontmatter.description}
+          badge={project.frontmatter.badge}
+          url={project.url}
+          target="_self"
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 </BaseLayout>
