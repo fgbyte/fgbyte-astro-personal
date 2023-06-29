@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
-import GithubReadmeCV from "../components/cv/GithubReadmeCV.astro";
+import GithubReadmeCv from "../components/cv/GithubReadmeCV.jsx"
 
 const currentYear = new Date().getFullYear();
 
@@ -9,7 +9,7 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`;
 ---
 
 <BaseLayout title="Resume">
-  <GithubReadmeCV />
+  <GithubReadmeCv client:load />
 
   <div class="flex mb-5 gap-6">
     <a class="btn" href="/projects"> Watch Portfolio</a>
