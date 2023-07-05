@@ -1,4 +1,4 @@
-import { QRCodeSVG } from "qrcode.react";
+import  QRCodeSVG  from "qrcode.react";
 import copy from "copy-to-clipboard";
 
 // const { QRCodeSVG } = pkg;
@@ -8,8 +8,6 @@ export const Modal = ({ qrData }) => {
   const copyEvent = () => {
     copy(qrData.value);
   };
-
-  // console.log(qrData) //👍
 
   return (
     <>
