@@ -1,50 +1,87 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ReactivePayments from "../components/payments/ReactivePayments.jsx"
+import ReactivePayments from "../components/payments/ReactivePayments.jsx";
 
 const qrData = {
-        btc: {
-            img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=024',
-            label: 'Bitcoin',
-            value: 'btc address'
-        },
-        usdt: {
-            img: 'https://manuelernestog.github.io/paylink/images/crypto/usdt.svg',
-            label: 'USDT TRC20',
-            value: 'usdt address'
-        },
-        cup: {
-            img: 'https://i.ibb.co/TgDc2Np/card.png',
-            label: 'CUP',
-            value: 'card number'
-        }
-    }
+  btc: {
+    img: "https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=024",
+    label: "Bitcoin",
+    value: "bc1qre5gfplx9w6ugctp46xtankg58qmw0xc5dtfu5v637vd6f2zu8rswyf969",
+  },
+  btcLN: {
+    img: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Lightning_Network.svg",
+    label: "BTC Lightning Network",
+    value:
+      "lnbc1pj2tg9gpp5q5e243cfzydpyzreqjlpgthavzkdc4vej98pjcsrc7x55s9ylfyqdqqcqzzgxqyz5vqrzjqwnvuc0u4txn35cafc7w94gxvq5p3cu9dd95f7hlrh0fvs46wpvhdu4sa55tq5e5dcqqqqryqqqqthqqpyrzjqw8c7yfutqqy3kz8662fxutjvef7q2ujsxtt45csu0k688lkzu3ldu4sa55tq5e5dcqqqqryqqqqthqqpysp5yg5g3twxydl7dqs6lyfh8du827l64zzg7lrppsya8yg6mz2g6pas9qypqsq3tathfwqqhkxjm65zeplgvelh0y2x7g0g8x06qep66zatt24hj9pktfqy95vkfjenqllxvuys6g559650ww6hntze835xdkp65crt9sp3x0wh5",
+  },
+  cup: {
+    img: "https://i.ibb.co/TgDc2Np/card.png",
+    label: "CUP",
+    value: "9204 0699 9923 9759",
+  },
+};
 ---
 
-<BaseLayout title="Fernando Garcia | Support my Work" description="If you find my work helpful you can support it donating the amount you can with any of these methods.">
+<BaseLayout
+  title="Fernando Garcia | Support my Work"
+  description="If you find my work helpful you can support it donating the amount you can with any of these methods."
+>
   <p class="my-10 mx-auto text-center md:px-20">
-    If you find my work helpful you can support it donating the amount you can with any of these methods. Thanks for help me
-    to keep doing this :)
+    If you find my work helpful you can support it donating the amount you can
+    with any of these methods. Thanks for help me to keep doing this :)
   </p>
 
   <div class="gap-6 flex-col flex">
     <div class="dropdown m-auto w-full md:w-auto">
-      <button tabindex="0" class="btn w-full md:w-96 btn-outline gap-2 flex justify-between">
-        <img src="https://static-00.iconduck.com/assets.00/visa-icon-256x79-nikia4dp.png" class="w-9" />
+      <button
+        tabindex="0"
+        class="btn w-full md:w-96 btn-outline gap-2 flex justify-between"
+      >
+        <img
+          src="https://static-00.iconduck.com/assets.00/visa-icon-256x79-nikia4dp.png"
+          class="w-9"
+        />
         <div>MasterCard / Visa</div>
         <div class="w-9"></div>
       </button>
-      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 mx-auto rounded-box w-full md:w-96">
-        <li><a href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/5/Donation" target="_blank">5 USD</a></li>
-        <li><a href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/10/Donation" target="_blank">10 USD</a></li>
-        <li><a href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/25/Donation" target="_blank">25 USD</a></li>
-        <li><a href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/50/Donation" target="_blank">50 USD</a></li>
-        <li><a href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/100/Donation" target="_blank">100 USD</a></li>
-        <li><a href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/200/Donation" target="_blank">200 USD</a></li>
+      <ul
+        tabindex="0"
+        class="dropdown-content menu p-2 shadow bg-base-100 mx-auto rounded-box w-full md:w-96"
+      >
+        <li>
+          <a
+            href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/5/Donation"
+            target="_blank">5 USD</a>
+        </li>
+        <li>
+          <a
+            href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/10/Donation"
+            target="_blank">10 USD</a>
+        </li>
+        <li>
+          <a
+            href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/25/Donation"
+            target="_blank">25 USD</a>
+        </li>
+        <li>
+          <a
+            href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/50/Donation"
+            target="_blank">50 USD</a>
+        </li>
+        <li>
+          <a
+            href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/100/Donation"
+            target="_blank">100 USD</a>
+        </li>
+        <li>
+          <a
+            href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/200/Donation"
+            target="_blank">200 USD</a>
+        </li>
       </ul>
     </div>
 
-    <ReactivePayments client:load data={qrData}/>
+    <ReactivePayments client:load data={qrData} />
 
     <!-- <a
       href="https://qvapay.com/payme/fgbyte"
@@ -55,6 +92,5 @@ const qrData = {
       <div>Qvapay / Crypto</div>
       <div class="w-9 h-9"></div>
     </a> -->
-
   </div>
 </BaseLayout>
