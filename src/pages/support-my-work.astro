@@ -11,19 +11,16 @@ const qrData = {
         usdt: {
             img: 'https://manuelernestog.github.io/paylink/images/crypto/usdt.svg',
             label: 'USDT TRC20',
-            value: 'usdt pingaaaa'
+            value: 'usdt dir'
         },
         cup: {
             img: 'https://i.ibb.co/TgDc2Np/card.png',
-            label: 'Card: CUP',
-            value: 'usdt pingaaaa'
-        },
-        mlc: {
-            img: 'https://i.ibb.co/TgDc2Np/card.png',
-            label: 'Card: MLC',
-            value: 'usdt pingaaaa'
+            label: 'TransferMobil: CUP',
+            value: 'card'
         }
     }
+
+    //TODO: Terminar los links
 ---
 
 <BaseLayout title="Fernando Garcia | Support my Work" description="If you find my work helpful you can support it donating the amount you can with any of these methods.">
@@ -33,7 +30,7 @@ const qrData = {
   </p>
 
   <div class="gap-6 flex-col flex">
-    <div class="dropdown m-auto w-full md:w-auto">
+    <!-- <div class="dropdown m-auto w-full md:w-auto">
       <button tabindex="0" class="btn w-full md:w-96 btn-outline gap-2 flex justify-between">
         <img src="https://static-00.iconduck.com/assets.00/visa-icon-256x79-nikia4dp.png" class="w-9" />
         <div>MasterCard / Visa</div>
@@ -47,10 +44,18 @@ const qrData = {
         <li><a href="https://tppay.me/lf95u7i8" target="_blank">100 USD</a></li>
         <li><a href="https://tppay.me/lf95w895" target="_blank">200 USD</a></li>
       </ul>
-    </div>
+    </div> -->
+    <a
+      href="https://remesita.com/payme/d1779099-f0f3-11ed-809a-02420a002209/-/Donation"
+      target="_blank"
+      class="btn btn-outline w-full md:w-96 gap-2 flex justify-between m-auto"
+    >
+      <img src="https://static-00.iconduck.com/assets.00/visa-icon-256x79-nikia4dp.png" class="w-9" />
+      <div>VISA CARD</div>
+      <div class="w-9 h-9"></div>
+    </a>
 
     <ReactivePayments client:load data={qrData}/>
-    
 
     <!-- <a
       href="https://qvapay.com/payme/fgbyte"
