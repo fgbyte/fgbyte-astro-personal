@@ -8,8 +8,6 @@ import react from "@astrojs/react"
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fgbyte.vercel.app',
+  site: 'https://fgbyte.com',
   integrations: [mdx(), sitemap(), tailwind(), react()],
-  // output: "server",
-  // adapter: vercel()
 });

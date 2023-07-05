@@ -1,4 +1,4 @@
-import Modal from "./Modal.jsx";
+import { Modal } from "./Modal.jsx";
 import Payment from "./Payment.jsx";
 import { useState } from "react";
 
