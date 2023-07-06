@@ -16,6 +16,7 @@ const ReactivePayments = ({ data }) => {
           img={item.img}
           label={item.label}
           value={item.value}
+          svg={item.svg}
           setQrData={(v) => setQrData(v)}
         />
       ))}
