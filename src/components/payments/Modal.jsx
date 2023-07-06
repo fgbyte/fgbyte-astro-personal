@@ -1,7 +1,7 @@
-// import * as QRCode from "qrcode.react";
+import * as QRCode from "qrcode.react";
 import copy from "copy-to-clipboard";
 
-// const { QRCodeSVG } = QRCode;
+const { QRCodeSVG } = QRCode;
 
 export const Modal = ({ qrData }) => {
   const copyEvent = () => {
@@ -26,10 +26,7 @@ export const Modal = ({ qrData }) => {
           </div>
 
           <div className="p-2 rounded-lg bg-white border-neutral border-2 w-fit m-auto my-6">
-            {/* <QRCodeSVG value={qrData.value} size="200" /> */}
-            <div>
-              <img src={qrData.svg} alt="qr" />
-            </div>
+            <QRCodeSVG value={qrData.value} size="200" />
           </div>
 
           <div className="text-center">

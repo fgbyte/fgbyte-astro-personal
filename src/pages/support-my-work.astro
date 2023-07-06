@@ -69,7 +69,7 @@ import { qrData } from "../components/helpers/qrData.js";
       </ul>
     </div>
 
-    <ReactivePayments client:load data={qrData} />
+    <ReactivePayments client:only data={qrData} />
 
     <!-- <a
       href="https://qvapay.com/payme/fgbyte"
