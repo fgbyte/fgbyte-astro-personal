@@ -19,4 +19,4 @@ Web Site Layouts implement with HTML, CSS/SASS, Bootstrap and JavaScript. Full R
 
 ### Shows:
 
-🌐<a href="https://landing-balmesvet-fgbyte.vercel.app" target="_blank">Watch Deployed</a>
+🌐<a href="https://landing-balmesvet-fgbyte.vercel.app" target="_blank">Deploy</a>

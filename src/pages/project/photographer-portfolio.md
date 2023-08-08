@@ -19,7 +19,7 @@ Commercial Portfolio/Catalog for Photographer and Photo Studio. Extensible for b
 
 ### Shows:
 
-🌐<a href="https://photographer-portfolio-fgbyte.vercel.app" target="_blank">Watch Deployed</a>
+🌐<a href="https://photographer-portfolio-fgbyte.vercel.app" target="_blank">Deploy</a>
 
 💻<a href="https://github.com/fgbyte/photographer-portfolio" target="_blank">Repository</a>
 

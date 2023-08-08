@@ -17,6 +17,6 @@ Portfolio Design implement with HTML, CSS/SASS and JavaScript. Full Responsive, 
 
 ### Shows:
 
-🌐<a href="https://fgbyte.github.io/demo-sass-portfolio/dist/" target="_blank">Watch Deployed</a>
+🌐<a href="https://fgbyte.github.io/demo-sass-portfolio/dist/" target="_blank">Deploy</a>
 
 💻<a href="https://github.com/fgbyte/demo-sass-portfolio" target="_blank">Code</a>
