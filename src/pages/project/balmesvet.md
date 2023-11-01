@@ -21,6 +21,8 @@ fav: true
 
  One of the standout features of this project is the seamless integration of Google Maps, which enhances the website's functionality. It provides users with precise location information and directions, making it easier for pet owners to find and access the hospital's services.
 
-### Shows:
+### Shows: 🌐
 
-🌐<a href="https://landing-balmesvet-fgbyte.vercel.app" target="_blank">Deploy</a>
+<div class="flex flex-col gap-1 w-fit">
+  <a href="https://landing-balmesvet-fgbyte.vercel.app" target="_blank">Balmesvet Web</a>
+</div>

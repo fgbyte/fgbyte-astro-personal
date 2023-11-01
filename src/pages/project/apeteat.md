@@ -23,6 +23,8 @@ This project reflects my dedication to providing the food industry with web solu
 
 Coworker to <a href="https://github.com/guillezdev" target="_blank">@guillezdev</a>
 
-### Shows:
+### Shows: 🌐
 
-🌐<a href="https://apeteat-web.vercel.app" target="_blank">Deploy</a>
+<div class="flex flex-col gap-1 w-fit">
+  <a href="https://apeteat-web.vercel.app" target="_blank">Apeteat Web</a>
+</div>
