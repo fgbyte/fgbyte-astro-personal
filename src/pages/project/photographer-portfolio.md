@@ -5,7 +5,7 @@ client: Self
 publishDate: 2022-09-11
 heroImage: /projects/photographer-portfolio-social-banner.webp
 description: |
-  Commercial Portfolio/Catalog for Photographer and Photo Studio. SEO friendly, modern Frameworks.
+  Versatile Photographer's Showcase: Fast, Extensible, SEO-Friendly Web App Powered by Astro
 tags:
   - Astro
   - Bootstrap
@@ -15,8 +15,7 @@ badge:
 fav: true
 ---
 
-Commercial Portfolio/Catalog for Photographer and Photo Studio. Extensible for blog and store. Web App made with [Astro](https://astro.build). Fast loading, Auto Image Optimization and SEO friendly architecture.
-
+In this project, I developed a commercial portfolio and catalog tailored to photographers and photo studios. Built with [Astro](https://astro.build), the website is exceptionally fast-loading, offers auto image optimization, and follows an SEO-friendly architecture. What sets this project apart is its extensibility; it can seamlessly transform into a blog and an online store, providing a versatile online platform for photographers and studios. This project exemplifies my commitment to delivering visually appealing, high-performance web solutions for the photography industry.
 ### Shows:
 
 🌐<a href="https://photographer-portfolio-fgbyte.vercel.app" target="_blank">Deploy</a>
