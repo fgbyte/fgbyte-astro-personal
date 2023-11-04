@@ -1,17 +1,38 @@
+---
+import ChangeTheme from "./ChangeTheme.astro";
+
+---
+
+<script is:inline>
+  // ☝️ This script prevent the FART effect.
+  if (localStorage.getItem("theme") === null) {
+    document.documentElement.setAttribute("data-theme", "aqua");
+  } else
+    document.documentElement.setAttribute(
+      "data-theme",
+      localStorage.getItem("theme")
+    );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>
+
 <div
-  class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+  class="sticky top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm lg:shadow-none lg:justify-between"
 >
   <div class="navbar">
     <div class="navbar-start">
-      <label for="my-drawer" class="btn btn-square btn-ghost">
+      <label for="my-drawer" class="btn btn-square btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"
           ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </label>
     </div>
     <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl" href="/">fgbyte <span><img class="ml-2 w-5" src="/fav-fgbyte.svg" alt=""></span></a>
+      <a class="btn btn-ghost normal-case text-xl lg:hidden" href="/">fgbyte <span><img class="ml-2 w-5" src="/fav-fgbyte.svg" alt=""></span></a>
     </div>
-    <div class="navbar-end"></div>
+    <div class="navbar-end">
+      <!-- dark mode mobile here -->
+        <ChangeTheme />
+    </div>
   </div>
 </div>
