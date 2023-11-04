@@ -2,7 +2,7 @@
 layout: ../../layouts/ProjectLayout.astro
 title: Pildora Zero
 client: sermujer.health
-publishDate: 2023-09-08 00:00:00
+publishDate: 2023-03-01 00:00:00
 heroImage: /projects/pildora-zero.webp
 description: |
    Discovering Contraceptive Choices: Crafting a Dynamic, Responsive Landing Page
