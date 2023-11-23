@@ -1,7 +1,7 @@
 <script is:inline>
   // ☝️ This script prevent the FART effect.
   if (localStorage.getItem("theme") === null) {
-    document.documentElement.setAttribute("data-theme", "wireframe");
+    document.documentElement.setAttribute("data-theme", "garden");
   } else
   document.documentElement.setAttribute("data-theme",localStorage.getItem("theme"));
   // "theme" LocalStorage value is set by the package to remember user preference.
@@ -43,7 +43,7 @@
   >
     <div class="grid grid-cols-1 gap-3 p-3" tabindex="0">
       <!-- wireframe -->
-      <div
+      <!-- <div
         class="outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2"
         data-set-theme="wireframe"
         data-act-class="outline"
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- garden -->
       <div
         class="outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2"
