@@ -18,7 +18,7 @@ const GithubReadmeCV = () => {
 
   return (
     <article
-      className="py-3 overflow-auto prose-h2:mb-5 prose-h2:text-3xl prose-h2:font-bold prose-a:underline prose-ul:mt-4 prose-ul:my-2 prose-h4:text-xl prose-h4:mt-5 prose-img:my-5 prose-img:inline break-words prose-li:my-2 prose-p:text-base [&>p>a>img]:rounded-lg [&>p>a>img]:opacity-80"
+      className="py-3 overflow-auto prose-h2:mb-5 prose-h2:text-3xl prose-h2:font-bold prose-a:underline prose-ul:mt-4 prose-ul:my-2 prose-h4:text-xl prose-h4:mt-5 prose-img:mt-4 prose-img:inline break-words prose-li:my-2 prose-p:text-base [&>p>a>img]:rounded-lg [&>p>a>img]:opacity-80"
       dangerouslySetInnerHTML={{ __html: file }}
     ></article>
   );
