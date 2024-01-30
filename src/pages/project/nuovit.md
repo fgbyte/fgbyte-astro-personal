@@ -11,7 +11,6 @@ tags:
   - CSS
   - Tailwind CSS
   - JavaScript
-  - Pixel Perfect
   - Google Maps
 fav: true
 ---

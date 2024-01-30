@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
-import GithubReadmeCv from "../components/cv/GithubReadmeCV.jsx"
+import GithubReadmeCv from "../components/cv/GithubReadmeCV.jsx";
 
 const currentYear = new Date().getFullYear();
 
@@ -12,8 +12,34 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`;
   <GithubReadmeCv client:load />
 
   <div class="flex mb-5 gap-6">
-    <a class="btn" href="/projects"> Watch Portfolio</a>
-    <a class="btn btn-outline" href="https://resume.showwcase.com/fgbyte.pdf" target="_blank">Download CV</a>
+    <a class="btn" href="/projects"> Portfolio</a>
+    <a
+      class="btn btn-outline"
+      href="https://resume.showwcase.com/fgbyte.pdf"
+      target="_blank">Download CV</a
+    >
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Frontend Web Developer"
+      subtitle="2022 as Freelancer, from Cuba to WorldWide"
+      desc="Crafting dynamic user interfaces with cutting-edge technologies, I am proficient in TypeScript and React, building scalable web applications. I utilize Storybook to create design systems and Astro for websites, ensuring efficient development and seamless collaboration."
+    />
+    <TimeLineElement
+      title="UI Developer"
+      subtitle="2020 as Freelancer, from Cuba to WorldWide"
+      desc="Adept at transforming design concepts into interactive and user-friendly digital interfaces, I am proficient in leveraging technologies such as HTML, CSS, and JavaScript."
+    />
+    <TimeLineElement
+      title="UI Designer"
+      subtitle="2018 as Freelancer, from Cuba to WorldWide"
+      desc="Equipped with advanced skills in Photoshop, Adobe XD, and Figma, I seamlessly integrate design into WordPress with technical functionality."
+    />
   </div>
 
   <div class="mb-5">
@@ -32,7 +58,7 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`;
     />
   </div>
 
-  <div class="mb-5">
+  <!-- <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certifications</div>
   </div>
 
@@ -50,40 +76,10 @@ const educationSub = `2018 to ${currentYear}, Mozilla Developer Network`;
         >Open-Bootcamp <b>JavaScript</b> Certification
       </a>
     </li>
-    <!-- <li>
-      <a href="https://www.efset.org/cert/DxtNKG" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
-    </li>
     <li>
-      <a href="https://certiprof.com/pages/scrum-foundation-professional-certificate-sfpc-en-sp" target="_blank"> Scrum Foundation Professional Certificate (SFPC)</a>
-    </li> -->
-  </ul>
-
-  <!-- <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
-  </div>
-
-  <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="UI Designer and Developer at Integral Access Control System (Thesis)"
-      subtitle="From 2015 at XETID, Habana, Cuba"
-      desc="System multiplatform that includes the steps of a company's personnel, the structure and composition thereof, as well as a powerful designer of credentials and module of control of access. Outspread at the MINFAR and another entities of the country. Technologies: C++, Qt Framework, Subversión, Visual Paradigm, PostgreSQL, Jmeter"
-    />
-    <TimeLineElement
-      title="Web Developer at Integral Oil Drilling System 2.0"
-      subtitle="From 2015 to 2016 at CEDIN, UCI, Habana, Cuba"
-      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.7 , Subversión, PostgreSQL, HigthChart, Ireport, Boostrap 2, JQuery, HTML,CSS, JavaScript"
-    />
-    <TimeLineElement
-      title="Full Stack Dev, Software Architect and Project Leader at Integral Oil Drilling System 3.0"
-      subtitle="From 2016 to 2017 at CEDIN, UCI, Habana, Cuba"
-      desc="System of steps of process of perforation of oil wells. Outspread in the direction of Intervención of Wells and various wells of drilling of the Occident of the country. Generate reports and graphs of process of perforation making use of data mining. Technologies: Php,Symfony 2.8 , Gitlab, PostgreSQL, HigthChart, Boostrap 2, JQuery, HTML,CSS, JavaScript"
-    />
-    <TimeLineElement
-      title="Full Stack Dev, UI/UX Designer and Software Architect at Primary Information System"
-      subtitle="From 2017 to 2018 at CEDIN, UCI, Habana, Cuba"
-      desc="System of steps of primary information at a company. personnel's steps, control of access, impression of credentials, steps of locales, structure and composition. Technologies: Php,Symfony 3.3 , Gitlab, PostgreSQL, , Boostrap 3, JQuery, HTML,CSS, JavaScript"
-    />
-  </div> -->
+      <a href="#" target="_blank"> EF SET English Certificate 74/100 (C2 Proficient)</a>
+    </li>
+  </ul> -->
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
