@@ -11,7 +11,7 @@ tags:
   - SSR
   - Tailwind CSS
   - JavaScript
-badge: FOSS
+# badge: FOSS
 fav: true
 ---
 
