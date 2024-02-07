@@ -12,15 +12,16 @@ export interface Props {
     updatedDate?: string;
     heroImage?: string;
     tags?: string[];
+    client?: string;
   };
 }
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage, tags }
+  content: { title, description, pubDate, updatedDate, heroImage, tags, client }
 } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} image={heroImage} tags={tags}>
+<BaseLayout title={title} description={description} image={heroImage} tags={tags} client={client} >
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {heroImage && <img src={heroImage} alt={title} class="w-full mb-6" />}
@@ -30,6 +31,11 @@ const {
           {t}
         </div>
       ))}</div>
+      
+      {client && <div class="my-2">
+        <span>Client: <a href={client} target="_blank">{client}</a></span>
+      </div>}
+      
       {pubDate && <time>{pubDate}</time>}
       {
         updatedDate && (

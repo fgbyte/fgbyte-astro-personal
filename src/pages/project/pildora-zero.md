@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-title: Pildora Zero
-client: sermujer.health
+title: PildoraZero Landing Page
+client: https://sermujer.health
 publishDate: 2023-03-01 00:00:00
 heroImage: /projects/pildora-zero.webp
 description: |
@@ -13,15 +13,16 @@ tags:
   - JavaScript
 fav: true
 ---
+### Shows: 
 
+  🌐<a href="https://pildora-zero.vercel.app" target="_blank">Pildora Zero Landing Page</a>
+  
+  💻<a href="https://github.com/fgbyte/pildora-zero" target="_blank">Repository</a>
+
+
+
+### Summary:
 In this project focusing on contraceptive methods, I developed a landing page with a responsive and visually appealing layout. Employing relative design principles, I ensured that all elements were proportionally arranged. The highlight of this project lies in its use of JavaScript for conditional rendering. This dynamic functionality tailors the user experience, offering relevant information and interactive features.
-
-Whether users seek contraceptive details or interactive tools, the landing page adapts, exemplifying my commitment to providing informative and user-responsive web solutions for contraceptive methods.
 
 Coworker to <a href="https://github.com/guillezdev" target="_blank">@guillezdev</a>
 
-### Shows: 🌐
-
-<div class="flex flex-col gap-1 w-fit">
-  <a href="https://pildora-zero.vercel.app" target="_blank">Pildora Zero Landing Page</a>
-</div>
