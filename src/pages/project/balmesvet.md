@@ -15,16 +15,17 @@ badge:
 fav: true
 ---
 
-### Shows:
+### 🌐Live Demos:
 
-  🌐<a href="https://landing-balmesvet-fgbyte.vercel.app" target="_blank">Home</a>
-  🌐<a href="https://landing-balmesvet-fgbyte.vercel.app/servicios.html" target="_blank">Servicios</a>
-  🌐<a href="https://landing-balmesvet-fgbyte.vercel.app/contacto.html" target="_blank">Contacto</a>
+<div class="flex flex-col gap-1 w-fit">
+  <a href="https://landing-balmesvet-fgbyte.vercel.app" target="_blank">Home</a>
+  <a href="https://landing-balmesvet-fgbyte.vercel.app/servicios.html" target="_blank">Servicios</a>
+  <a href="https://landing-balmesvet-fgbyte.vercel.app/contacto.html" target="_blank">Contacto</a>
+</div>
 
-  💻<a href="https://github.com/fgbyte/Landing-Balmesvet" target="_blank">Repository</a>
 
+### 💻Repository:
+  <a href="https://github.com/fgbyte/Landing-Balmesvet" target="_blank">GitHub</a>
 
-### Summary:
-These web layouts are designed to be fully responsive, allowing pet owners to access vital information and services conveniently on a range of devices. To cater to the diverse needs of the veterinary hospital, I also integrated internal pages, offering a cohesive and informative journey for website visitors.
 
 

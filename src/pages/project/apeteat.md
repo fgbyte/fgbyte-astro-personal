@@ -16,19 +16,20 @@ fav: true
 ---
 
 
-### Shows:
+### 🌐Live Demos:
 
-  🌐<a href="https://apeteat-web.vercel.app" target="_blank">Home</a>
-  🌐<a href="https://apeteat-web.vercel.app/la-empresa.html" target="_blank">La Empresa</a>
-  🌐<a href="https://apeteat-web.vercel.app/como-funciona.html" target="_blank">Cómo funciona</a>
-  🌐<a href="https://apeteat-web.vercel.app/registrate.html" target="_blank">Regístrate</a>
-  🌐<a href="https://apeteat-web.vercel.app/contacto.html" target="_blank">Contacto</a>
+<div class="flex flex-col gap-1 w-fit">
+  <a href="https://apeteat-web.vercel.app" target="_blank">Home</a>
+  <a href="https://apeteat-web.vercel.app/la-empresa.html" target="_blank">La Empresa</a>
+  <a href="https://apeteat-web.vercel.app/como-funciona.html" target="_blank">Cómo funciona</a>
+  <a href="https://apeteat-web.vercel.app/registrate.html" target="_blank">Regístrate</a>
+  <a href="https://apeteat-web.vercel.app/contacto.html" target="_blank">Contacto</a>
+</div>
 
-  💻<a href="https://github.com/fgbyte/apeteat-web" target="_blank">Repository</a>
 
+### 💻Repository:
+  <a href="https://github.com/fgbyte/apeteat-web" target="_blank">GitHub</a>
 
-### Summary:
-These layouts are not only aesthetically pleasing but also fully responsive, ensuring a seamless and enjoyable browsing experience on a variety of devices. In addition, I designed internal pages that maintain a cohesive and attractive visual identity throughout the website.
 
 
 Coworker to <a href="https://github.com/guillezdev" target="_blank">@guillezdev</a>
